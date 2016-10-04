@@ -7,3 +7,9 @@
   <strong>Note:</strong>
   <%= note.body %>
 </p>
+
+<p>
+  <%= link_to 'Destroy Note', [note.patient, note],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+</p>

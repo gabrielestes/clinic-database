@@ -1,0 +1,13 @@
+<%= form_for([@patient, @patient.notes.build]) do |f| %>
+  <p>
+    <%= f.label :clinician %><br>
+    <%= f.text_field :clinician %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
