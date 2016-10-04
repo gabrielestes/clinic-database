@@ -7,6 +7,7 @@
     <th>Last Name</th>
     <th>First Name</th>
     <th>Birth Date</th>
+    </th>
   </tr>
 
   <% @patients.each do |patient| %>
@@ -16,6 +17,10 @@
       <td><%= patient.first_name %></td>
       <td><%= patient.birth_date %></td>
       <td><%= link_to 'Show', patient_path(patient) %></td>
+      <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+      <td><%= link_to 'Destroy', patient_path(patient),
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %></td>
     </tr>
   <% end %>
 </table>
